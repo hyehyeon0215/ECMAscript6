@@ -72,14 +72,40 @@
 
 // 매개변수가 2개 이상인 경우에도 디폴트 파라미터가 가능하다 (장점)
 
-function game(){}
-let game2 = function(){}
+// function game(){}
+// let game2 = function(){}
 
-let intro = function(name = 'David', interests = "Game"){
-    return "My Name is " + name + " and I Love " + interests + '.'
+// let intro = function(name = 'David', interests = "Game"){
+//     return "My Name is " + name + " and I Love " + interests + '.'
+// }
+// console.log(intro());
+
+// 매개변수가 여러 개인 경우 매개변수 자리에 , 연결해서 작성 가능합니다 (88-93)
+// name = "David", interests = "Game"
+// name, interests가 존재한다면 그것을 그대로 사용하고, 없으면 = 이후의 값을 디폴트 값으로 사용
+
+
+// let intro = function(name = 'David', interests = "Game"){
+//     return `My Name is ${name} and I Love ${interests}.`
+// }
+// console.log(intro());
+
+// // 템플릿 리터럴 (백틱 사용)
+
+
+
+
+
+
+let defaults = {name: "David", interests : "Game"};
+
+let intro = function(opt = defaults) {
+    // opt는 intro({name: "오은택", interests: "reading book"}) 이곳에서
+    // { name: "오은택", interests: "reading book"}이 객체를 의미합니다 즉 매개변수로 써준 값을 대신한다
+    // 따라서 opt.name은 객체로 인수 값을 적은 내용에서 키 값이 name인 값이 적용되는 것
+    // opt.interests는 객체로 인수 값을 적은 내용에서 키 값이 interests인 값이 적용됨
+    return `My Name is ${opt.name} and I Love ${opt.interests}.`
 }
+
 console.log(intro());
-
-// 매개변수가 여러 개인 경우 매개변수 자리에 , 연결해서 작성 가능합니다
-
-
+console.log(intro({ name: "오은택", interests: "reading book"}));
