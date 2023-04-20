@@ -66,5 +66,13 @@ let styled = (tag) => {
     }
 }
 
-let box = styled("div")`width : 100px; height : 100px; border-radius : 50%; background-color : aqua;`;
+let box = styled("div")`
+        width : 100px;
+        height : 100px;
+        border-radius : 50%;
+        background-color : aqua;`;
 main2.append(box);
+
+// 0420 1교시
+/* 함수의 리턴 값을 함수로 반환해서 dom요소를 만드는 동시에 스타일을 입히는 구조를 만들어냄
+``(백틱)을 사용하면 안에 있는 값이 세미콜론 단위로 끊어져 배열에 저장됨 */
