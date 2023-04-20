@@ -32,6 +32,7 @@ let makeDom = (tag)=>{
         return dom;
     }
     // 지금까지 함수 리턴 값은 문자/숫자였지만, 함수 값으로 리턴할 수 있음
+    // []는 패키징 .color = [css.prop] prop: 'color';
 }
 
 console.log(makeDom('h1'));
