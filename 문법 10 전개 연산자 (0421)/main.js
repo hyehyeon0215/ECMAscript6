@@ -92,4 +92,4 @@ const obj = {
 const newObj = {...obj, address : "seoul"};
 
 console.log(obj);
-console.log(newObj)
+console.log(newObj);
